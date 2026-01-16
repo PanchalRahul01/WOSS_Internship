@@ -55,10 +55,7 @@ public class prac3{
     public void View_cart(){
 
         for(Shopping_Cart c : cart){
-            System.out.println(c.getName());
-            System.out.println(c.getQuantity());
-            System.out.println(c.getPrice());
-            System.out.println("--------------------------");
+            System.out.println(c.getName()+c.getQuantity()+c.getPrice());
         }
     }
 
@@ -97,7 +94,7 @@ public class prac3{
                     pr.Remove_Item(name);
                     break;
                 case 3:
-                    System.out.println("Item Name   Quantity    amount   Total price");
+                    System.out.println("Item Name  Quantity   amount   Total price");
                     pr.View_cart();
                     break;
                 case 4:
