@@ -70,7 +70,6 @@ public class prac3{
         Shopping_Cart c=new Shopping_Cart(name,quantity,price,total);
         cart.add(c);
     }
-
     public void Remove_Item(String name) {
 
         Iterator<Shopping_Cart> it = cart.iterator();
