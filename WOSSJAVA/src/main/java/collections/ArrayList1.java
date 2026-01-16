@@ -17,6 +17,7 @@ public class ArrayList1 {
         list.add(40);
         list.add(50);
 
+
         System.out.println("List"+list);
 
         System.out.print("Enter the value replace :");
