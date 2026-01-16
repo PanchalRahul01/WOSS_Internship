@@ -1,5 +1,20 @@
+/*Write a program for shopping carts. Ask users to enter item name, quantity and amount
+per item and calculate final and show the bill in a pretty format.
+Operations
+1. Add Item
+2. Remove Item
+3. View Cart
+4. Exit
+Add Item
+Item Name
+Quantity
+Price per Unit
+Remove Item
+Item Name
+View Cart */
+
+
 package collections;
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
@@ -8,6 +23,7 @@ class Shopping_Cart{
             private String name;
             private int quantity;
             private double price;
+            private double total;
 
             public String getName(){
                 return this.name;
@@ -27,12 +43,21 @@ class Shopping_Cart{
             public void setPrice(double price){
                 this.price=price;
             }
+            public double gettotal(){
+                return this.total;
+            }
 
-            public Shopping_Cart(String name,int quantity,double price){
+            public void settotal(double total){
+                this.total=total;
+            }
+
+            public Shopping_Cart(String name,int quantity,double price,double total){
                 this.name=name;
                 this.quantity=quantity;
                 this.price=price;
+                this.total=total;
             }
+
 
         }
 
@@ -41,21 +66,32 @@ public class prac3{
     ArrayList<Shopping_Cart> cart=new ArrayList<>();
 
 
-    public void Add_Item(String name, int quantity, double price) {
-        name=name;
-        quantity=quantity;
-        price=price;
-        Shopping_Cart c=new Shopping_Cart(name,quantity,price);
+    public void Add_Item(String name, int quantity, double price,double total) {
+        Shopping_Cart c=new Shopping_Cart(name,quantity,price,total);
         cart.add(c);
     }
 
     public void Remove_Item(String name) {
-        cart.removeIf(c -> c.getName().equals(name));
+
+        Iterator<Shopping_Cart> it = cart.iterator();
+        while(it.hasNext()){
+            Shopping_Cart c = it.next();
+            if(c.getName().equalsIgnoreCase(name)){
+                it.remove();
+            }
+        }
+
+        //cart.removeIf(c -> c.getName().equals(name));
     }
     public void View_cart(){
 
         for(Shopping_Cart c : cart){
-            System.out.println(c.getName()+c.getQuantity()+c.getPrice());
+
+            if(cart.isEmpty()){
+                System.out.println("Nothing to show..");
+            }
+
+            System.out.println(c.getName()+"----->"+c.getQuantity()+"------->"+c.getPrice()+"------->"+c.gettotal());
         }
     }
 
@@ -67,6 +103,7 @@ public class prac3{
         String name;
         int quantity;
         double price;
+        double total;
 
         while(true){
 
@@ -86,7 +123,8 @@ public class prac3{
                      quantity = sc.nextInt();
                     System.out.println("Enter Item Price pr Unit :");
                      price = sc.nextInt();
-                     pr.Add_Item(name,quantity,price);
+                     total=quantity*price;
+                     pr.Add_Item(name,quantity,price,total);
                      break;
                 case 2:
                     System.out.println("Enter the Item Name :");
@@ -99,8 +137,9 @@ public class prac3{
                     break;
                 case 4:
                     return;
-
             }
+
+
         }
 
     }

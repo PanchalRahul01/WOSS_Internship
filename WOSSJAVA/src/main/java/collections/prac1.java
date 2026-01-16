@@ -1,7 +1,18 @@
+/*Write a small application to develop a Banking Application in which the user deposits the
+        amount Rs 1000.00 and then starts withdrawing Rs 400.00, Rs 300.00 and it throws an
+        exception "Not Sufficient Fund" when the user withdraws Rs. 500 thereafter.
+        Operations
+        1. Deposit
+        2. Withdraw
+        3. View Statement
+        4. Exit*/
+
+// prac2-> include Extends the bank program created above and displays the statement of a given account
+//with filter options.
+
+
 package collections;
 
-import javax.naming.InsufficientResourcesException;
-import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Scanner;
 
