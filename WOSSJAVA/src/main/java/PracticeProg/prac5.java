@@ -10,6 +10,7 @@ public class prac5 {
         int max=arr[0];
         int secmax=arr[0];
 
+        //
         for(int i=0;i<arr.length;i++){
             if(arr[i]<min){
                 secmin=min;

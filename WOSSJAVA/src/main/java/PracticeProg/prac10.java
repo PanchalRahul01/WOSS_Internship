@@ -15,7 +15,6 @@ public class prac10 {
             map.put(arr[i],map.getOrDefault(arr[i],0)+1);
         }
 
-
 //        for(int key:map.keySet()){
 //            System.out.println(key+"->"+map.get(key));
 //        }

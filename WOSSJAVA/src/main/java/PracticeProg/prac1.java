@@ -11,20 +11,29 @@ import java.util.Scanner;
 
 public class prac1 {
     public static void main(String[] args) {
+
         Scanner sc=new Scanner(System.in);
         System.out.print("Start Number:");
-        int start=sc.nextInt();
+        int startNum=sc.nextInt();
         System.out.print("End Number:");
-        int end=sc.nextInt();
+        int endNum=sc.nextInt();
         System.out.println();
         System.out.println("Choose Number Type:");
         System.out.println("1)odd \n 2)Even");
         int choice=sc.nextInt();
 
-        switch (choice){
+        //Check the Start Number Is Less Than End Number
+        if(startNum>endNum){
+            System.out.println("Invalid Input");
+        }
+
+
+        //Switch Case For Odd And Even
+        switch (choice)
+        {
             case 1:
                 System.out.print("odd Range:");
-                for (int i=start; i<=end; i++){
+                for (int i=startNum; i<=endNum; i++){
                     if (i%2!=0){
                         System.out.print(i+"->");
                     }
@@ -32,7 +41,7 @@ public class prac1 {
                 break;
             case 2:
                 System.out.print("Even Range:");
-                for (int i=start; i<=end; i++){
+                for (int i=startNum; i<=endNum; i++){
                     if (i%2==0){
                         System.out.print(i+"->");
                     }
@@ -41,9 +50,5 @@ public class prac1 {
             default:
                 System.out.println("Invalid Choice");
         }
-
-
-
-
     }
 }

@@ -9,11 +9,14 @@ public class prac4 {
         int min=arr[0];
         int max=arr[0];
 
+        //loop for 1 to n Range
         for(int i=0;i<arr.length;i++){
+
+            //check the num is min
             if(arr[i]<min){
                 min=arr[i];
             }
-            else if(arr[i]>min){}
+            //checj the num os Max
             if(arr[i]>max){
                 max=arr[i];
             }

@@ -9,6 +9,7 @@
 
 package File_Handling;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.sql.SQLOutput;
@@ -17,32 +18,32 @@ public class prac2 {
 
     public static void main(String[] args) {
 
-        String FilePath="D:/prac3/";
+        File obj=new File("pqr.txt");
 
-        File obj=new File(FilePath);
-
-        if(!obj.exists() || !obj.isDirectory()){
-            System.out.println("File does not exist or is not a directory");
+        if(obj.delete()){
+            System.out.println("File Deleted");
+        }
+        else {
+            System.out.println("File Not Deleted");
         }
 
-        File[] files = obj.listFiles();
 
+
+/*
         try{
-            FileReader fr=new FileReader(FilePath);
+            if (files == null) throw new AssertionError();
+            FileReader fr=new FileReader(files[1]);
+            BufferedReader br=new BufferedReader(fr);
+
+
 
 
 
         }
         catch(Exception e){
             System.out.println("File does not exist or is not a directory");
-        }
+        }*/
 
-
-        if(files!=null){
-            for (File file : files) {
-                System.out.println("File"+file.getAbsoluteFile());
-            }
-        }
     }
 
 }
