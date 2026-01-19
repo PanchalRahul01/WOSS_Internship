@@ -23,7 +23,6 @@ public class prac21 {
                 }
             }
 
-
             System.out.println("letter"+countletter+"Digit"+countdigit);
         }
 

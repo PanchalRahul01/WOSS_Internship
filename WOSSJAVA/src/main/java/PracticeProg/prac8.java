@@ -7,13 +7,11 @@ public class prac8 {
 
         String str1 = "abc";
         String str2 = "pqr";
-        String str3 = "wxyz";
 
         str1=str1+str2;
         str2=str1.substring(0,str1.length()-str2.length());
         str1=str1.substring(str2.length());
 
-        //System.out.println(str3.substring(3,4));
         System.out.println(str1);
         System.out.println(str2);
 

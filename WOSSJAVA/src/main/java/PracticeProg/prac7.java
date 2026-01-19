@@ -8,6 +8,7 @@ public class prac7 {
     public static void main(String[] args) {
         int data=2346;
         int sum=0;
+
         while(data>0){
             int rem=data%10;
             sum=sum+rem;

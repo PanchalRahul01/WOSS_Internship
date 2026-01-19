@@ -14,28 +14,6 @@ public class prac12 {
         int[] result=new int[nums.length];
         int k=0;
 
-       /* for(int i=0;i<nums.length;i++){
-            if(nums[i]%2==0){
-                result[k]=nums[i];
-                k++;
-            }
-        }
-        for(int i=0;i<nums.length;i++){
-            if(nums[i]%2!=0){
-                result[k]=nums[i];
-                k++;
-            }
-        }*/
-
-       /* for(int i=0;i<nums.length-1;i++){
-            if(nums[i]%2!=0 && nums[i+1]%2==0){
-                int temp=nums[i];
-                nums[i]=nums[i+1];
-                nums[i+1]=temp;
-            }
-
-        }*/
-
         int j=nums.length-1;
         for(int i=0;i<=nums.length/2;i++){
                 if(nums[i]%2!=0 && nums[j]%2==0){
@@ -44,10 +22,7 @@ public class prac12 {
                     nums[j]=temp;
                     j--;
                 }
-
         }
-
-      //  System.out.println(Arrays.toString(result));
         System.out.println(Arrays.toString(nums));
     }
 }

@@ -12,7 +12,6 @@ public class prac9 {
     public static void findduplicate(int[] arr){
 
         HashMap<Integer,Integer> map=new HashMap<Integer,Integer>();
-     //   HashSet<Integer> set=new HashSet<>();
 
         for (int j : arr) {
             map.put(j, map.getOrDefault(j, 0) + 1);
