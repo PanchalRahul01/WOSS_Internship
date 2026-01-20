@@ -11,15 +11,28 @@ public class prac9 {
 
     public static void findduplicate(int[] arr){
 
-        HashMap<Integer,Integer> map=new HashMap<Integer,Integer>();
 
-        for (int j : arr) {
-            map.put(j, map.getOrDefault(j, 0) + 1);
-        }
-        for(int key:map.keySet()){
-            if(map.get(key)>=2){
-                System.out.print(key+",");
+        for(int i=0;i<arr.length;i++){
+
+            if(arr[i]==-1){
+                continue;
             }
+            boolean value=false;
+
+            for(int j=i+1;j<arr.length;j++){
+
+                if(arr[i]==arr[j]){
+                    value=true;
+                    arr[j]=-1;
+                }
+
+            }
+
+            if(value){
+                System.out.println(arr[i]);
+            }
+
+
         }
     }
 
